@@ -25,7 +25,8 @@ namespace CourseLibrary.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers(setupAction =>
-            setupAction.ReturnHttpNotAcceptable = true).AddXmlDataContractSerializerFormatters();
+            setupAction.ReturnHttpNotAcceptable = true)
+                .AddXmlDataContractSerializerFormatters();
              
             services.AddScoped<ICourseLibraryRepository, CourseLibraryRepository>();
 
